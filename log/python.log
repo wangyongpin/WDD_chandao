@@ -1,1 +1,3 @@
 2021-02-25 14:42:07,370 - log_utlis.py[line:18] - INFO: 运行结束
+2021-02-25 15:37:19,664 - log_utlis.py[line:17] - INFO: 这是获取用户名成功：用户名是admin
+2021-02-25 15:37:19,664 - log_utlis.py[line:17] - INFO: 运行结束

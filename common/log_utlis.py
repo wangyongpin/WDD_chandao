@@ -19,6 +19,7 @@ class LogUtils:
     def error(self,message): # 写错误日志信息
         self.logger.error(message)
 
+logger = LogUtils()
 # 测试
 if __name__ == '__main__':
     log_test =  LogUtils()
