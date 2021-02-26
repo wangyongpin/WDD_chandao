@@ -21,3 +21,4 @@
 2021-02-25 16:16:02,749 - log_utlis.py[line:17] - INFO: 输入用密码：Pass1234
 2021-02-25 16:16:02,885 - log_utlis.py[line:17] - INFO: 点击登录
 2021-02-25 16:16:05,577 - log_utlis.py[line:17] - INFO: 这是获取用户名成功：用户名是admin
+2021-02-26 13:52:33,929 - log_utlis.py[line:17] - INFO: 打开URL地址 http://127.0.0.1/zentao/user-login.html

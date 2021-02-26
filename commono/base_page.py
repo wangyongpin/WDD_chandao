@@ -3,14 +3,12 @@ from selenium import webdriver
 import os,time
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
+from commono.log_utlis import logger
 
-from login_project.login_page import Login_Project_Test # 导入登录包
-from common.log_utlis import logger
-
-class BasePage:
-    def __init__(self,driver:webdriver):
-        self.driver = webdriver.Chrome() # driver
-    # 浏览器操作的封装--->二次封装
+class BasePage(object):
+    def __init__(self,driver):
+        self.driver = driver # driver
+    # # 浏览器操作的封装--->二次封装
     def oper_url(self,url):
         self.driver.get( url )
         logger.info('打开URL地址 % s' % url)
@@ -60,7 +58,6 @@ class BasePage:
         element = self.find_element(element_info)
         element.send.keys(content)
         logger.info('[%s]元素输入内容%s' % (element_info['element_name'],content))
-
 
 
 

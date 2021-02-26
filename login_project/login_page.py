@@ -1,11 +1,10 @@
 from selenium import webdriver
 import os,time
 from selenium.webdriver.common.by import By
-from common.log_utlis import logger
-from common.base_page import BasePage
+from commono.log_utlis import logger
 
 
-class Login_Project_Test(BasePage):
+class Login_Project_Test():
     def __init__(self):
         self.driver = webdriver.Chrome(executable_path=login_path)
         self.driver.implicitly_wait(10)

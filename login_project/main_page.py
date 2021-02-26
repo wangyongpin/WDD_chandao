@@ -2,7 +2,7 @@ from selenium import webdriver
 import os,time
 from selenium.webdriver.common.by import By
 from login_project.login_page import Login_Project_Test # 导入登录包
-from common.log_utlis import logger
+from commono.log_utlis import logger
 
 crueet_path = os.path.dirname(__file__)
 login_path = os.path.join(crueet_path,'../webdriver/geckodriver.exe')
