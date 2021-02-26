@@ -47,7 +47,7 @@ class BasePage:
         elif locator_type_name == 'xpath':
             locator_type = By.XPATH
         element = WebDriverWait(self.driver,locator_timeout)\
-            .unitl(lambda x:x.find_element(locator_type,locator_value_info))
+            .until(lambda x:x.find_element(locator_type,locator_value_info))
         logger.info('[%s]元素识别成功'%element_info['element_name'])
         return element
 

@@ -4,7 +4,6 @@ from selenium.webdriver.common.by import By
 from login_project.login_page import Login_Project_Test # 导入登录包
 from common.log_utlis import logger
 
-
 crueet_path = os.path.dirname(__file__)
 login_path = os.path.join(crueet_path,'../webdriver/geckodriver.exe')
 
@@ -22,17 +21,21 @@ class main_Project_Test:
 
     def companyname_showbox(self): # 获取公司名称
         value1 = self.companyname_showbox.get_attribute('title')
+        time.sleep(2)
         logger.info('这是获取公司名称')
         return value1
 
     def myzone_menu(self): # 进入我的地盘菜单
+        time.sleep(2)
         self.myzone_menu.click()
 
     def product_menu(self): # 进入我的产品菜单
+        time.sleep(2)
         self.product_menu.click()
         logger.info('这是点击产品菜单')
 
     def get_username(self): # 点击我的用户
+        time.sleep(2)
         value = self.username_shhowspan.text
         logger.info('这是获取用户名成功：用户名是'+str(value))
         return value
@@ -41,6 +44,9 @@ if __name__ == '__main__':
     main_page = main_Project_Test()
     username = main_page.get_username()
     print(username)
+    # main_page.myzone_menu() # 线性脚本不支持 多个是咧化后多个点击
+    # main_page.product_menu()# 线性脚本不支持 多个是咧化后多个点击
+    main_page.companyname_showbox()
     logger.info('运行结束')
 
 

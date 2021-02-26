@@ -2,10 +2,10 @@ from selenium import webdriver
 import os,time
 from selenium.webdriver.common.by import By
 from common.log_utlis import logger
+from common.base_page import BasePage
 
-crueet_path = os.path.dirname(__file__)
-login_path = os.path.join(crueet_path,'../webdriver/chromedriver.exe')
-class Login_Project_Test:
+
+class Login_Project_Test(BasePage):
     def __init__(self):
         self.driver = webdriver.Chrome(executable_path=login_path)
         self.driver.implicitly_wait(10)
@@ -30,6 +30,8 @@ class Login_Project_Test:
         logger.info('点击登录')
 
 if __name__ == '__main__':
+    crueet_path = os.path.dirname(__file__)
+    login_path = os.path.join(crueet_path, '../webdriver/chromedriver.exe')
     login = Login_Project_Test()
     login.username_input('admin')
     login.userpass_input('Pass1234')
